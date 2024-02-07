@@ -1,1 +1,3 @@
-print ("Hello World")
+""""nothing"""
+
+print("Hello")
