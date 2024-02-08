@@ -1,6 +1,6 @@
-"""One Shot Battleship EX02"""
+"""One Shot Battleship EX02."""
 
-__author__="730404818"
+__author__ = "730404818"
 
 grid_size: int = 4
 secret_row: int = 3
@@ -35,7 +35,7 @@ row_counter: int = 1
 
 while row_counter <= grid_size:
     emoji_row: str = ''
-    column_counter: int=1
+    column_counter: int = 1
     if row_guess == row_counter:
         """Then go down the column on that row 1 by 1 and evaluate to see where to addd colored box"""
         while column_counter <= grid_size:
@@ -59,18 +59,10 @@ while row_counter <= grid_size:
 if row_guess == secret_row and column_guess == secret_column:
     print("Hit!")
 else:
-    print ("Miss!")
+    print("Miss!")
 
 
 if row_guess == secret_row and column_guess != secret_column:
     print("Close! Correct row, wrong column.")
 if column_guess == secret_column and row_guess != secret_row:
     print("Close! Correct column, wrong row.")
-
-
-
-
-
-
-
-
