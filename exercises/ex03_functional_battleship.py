@@ -80,7 +80,7 @@ def main(grid_size: int, secret_row: int, secret_column: int) -> None:
         else:
             print("Miss!")
         turn_counter += 1
-    if turn_counter > num_turns and game_won:
+    if turn_counter > num_turns and not game_won:
         print("X/5 - Better luck next time!")
 
 
