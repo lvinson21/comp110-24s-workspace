@@ -17,7 +17,7 @@ def input_guess(num: int, word: str) -> int:
         if guess > num or guess < 1:
             guess = int(input(f"The grid is only {num} by {num}. Try again: "))
         good_guess = False
-        return guess
+    return guess
 
 
 def print_grid(grid_size: int, row_guess: int, column_guess: int, users_guess: bool) -> None:
@@ -75,11 +75,12 @@ def main(grid_size: int, secret_row: int, secret_column: int) -> None:
         if users_guess:
             game_won = True
             print("Hit!")
-            print(f"You won {turn_counter}/5 turns!")
+            print(f"You won in {turn_counter}/5 turns!")
+            turn_counter = 6
         else:
             print("Miss!")
         turn_counter += 1
-    if turn_counter > num_turns:
+    if turn_counter > num_turns and game_won == False:
         print("X/5 - Better luck next time!")
 
 
