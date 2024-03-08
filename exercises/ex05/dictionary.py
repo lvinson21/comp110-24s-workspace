@@ -58,4 +58,4 @@ def update_attendance(students: dict[str, list[str]], day: str, student: str) ->
         students[day].append(student)
     else:
         students[day] = [student]
-    return students 
+    return None 
